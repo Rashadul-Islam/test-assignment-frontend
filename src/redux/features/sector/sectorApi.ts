@@ -4,6 +4,7 @@ const sectorApi = api.injectEndpoints({
   endpoints: (builder) => ({
     getAllSector: builder.query({
       query: () => "sectors",
+      providesTags: ["userData"],
     }),
   }),
 });
