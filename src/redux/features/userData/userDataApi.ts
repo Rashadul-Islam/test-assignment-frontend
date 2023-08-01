@@ -11,6 +11,7 @@ const userDataApi = api.injectEndpoints({
     }),
     getuserData: builder.query({
       query: () => "userData",
+      providesTags: ["userData"],
     }),
     updateUserData: builder.mutation({
       query: (data) => ({
@@ -18,6 +19,7 @@ const userDataApi = api.injectEndpoints({
         method: "PATCH",
         body: data,
       }),
+      invalidatesTags: ["userData"],
     }),
   }),
 });
